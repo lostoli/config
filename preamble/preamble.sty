@@ -56,7 +56,7 @@ linkcolor=link, citecolor=cite}
 \usepackage{bbold}
 \usepackage{bbm}
 \usepackage{xcolor}
-\definecolor{link}{rgb}{0.3,0.3,0.9}
+\definecolor{link}{RGB}{46,139,87}
 \definecolor{cite}{rgb}{0.7,0.13,0.13}
 \definecolor{note}{rgb}{0.91,0.11,0.51}
 \usepackage{chngcntr}
@@ -79,6 +79,7 @@ linkcolor=link, citecolor=cite}
 \declarecommand{\mu}{\upmu}
 \declarecommand{\nu}{\upnu}
 \newcommand{\be}{\upbeta}
+\newcommand{\io}{\upiota}
 \newcommand{\ga}{\upgamma}
 \newcommand{\Ga}{\upGamma}
 \newcommand{\del}{\updelta}
@@ -165,6 +166,9 @@ linkcolor=link, citecolor=cite}
 \newcommand{\gow}{\mathfrak{w}}
 \newcommand{\goT}{\mathfrak{T}}
 \newcommand{\goB}{\mathfrak{B}}
+\newcommand{\goS}{\mathfrak{S}}
+\newcommand{\gosl}{\mathfrak{sl}}
+\newcommand{\goso}{\mathfrak{so}}
 
 %%%%%%%Groups
 \newcommand{\OO}{\operatorname{O}}
@@ -192,7 +196,7 @@ linkcolor=link, citecolor=cite}
 \DeclarePairedDelimiter\pa{(}{)}
 \DeclarePairedDelimiter\Sp{\langle}{\rangle}
 \DeclarePairedDelimiter\br{[}{]}
-\DeclarePairedDelimiter\floor{\lfloor}{rfloor}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \DeclarePairedDelimiter\ceil{\lceil}{rceil}
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::
 \newcommand{\defi}{\coloneqq}
@@ -209,6 +213,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\re}{\operatorname{Re}}
 \newcommand{\im}{\operatorname{Im}}
 \newcommand{\Mat}{\operatorname{Mat}}
+\newcommand{\Sym}{\operatorname{Sym}}
 \newcommand{\spa}{\on{span}}
 \newcommand{\supp}{\on{supp}}
 \newcommand{\Ad}{\on{Ad}}
@@ -229,9 +234,10 @@ linkcolor=link, citecolor=cite}
 \newcommand{\sm}{\smallsetminus}
 \newcommand{\tdots}{\times\dots\times}
 \newcommand{\adots}{+\dots +}
+\newcommand{\otdots}{\otimes\dots\otimes}
 \newcommand{\ldots}{,\dots ,}
-\newcommand{\df}[3]{#1\colon #2\to #3}
-
+\newcommand{\df}[3]{{#1}\colon {#2}\to {#3}}
+\newcommand{\id}{\textrm{Id}}
 
 %Notes of coauthors
 \newcommand{\usnote}[1]{\marginpar{\color{cyan}\tiny [US] #1}}
