@@ -7,9 +7,9 @@
 %<---
 
 %---> Standard packages
-%\usepackage{charter}
-%\usepackage[charter]{mathdesign}
-\usepackage{newpxmath,newpxtext}
+\usepackage{charter}
+\usepackage[charter]{mathdesign}
+%\usepackage{newpxmath,newpxtext}
 \renewcommand{\familydefault}{\rmdefault}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
@@ -68,6 +68,7 @@ linkcolor=link, citecolor=cite}
 \providecommand{\propositionname}{Proposition}
 \providecommand{\remarkname}{Remark}
 \providecommand{\theoremname}{Theorem}
+\linespread{1.02333}
 %<---
 
 %%--->Symbols
@@ -232,6 +233,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\DT}[2]{\bT\bZ^{#2}_{#1}}
 \newcommand*{\bcdot}{\raisebox{-0.65ex}{\scalebox{2.1}{$\cdot$}}}
 \newcommand{\isum}{\textstyle\sum}
+\newcommand{\iprod}{\textstyle\prod}
 \newcommand{\sm}{\smallsetminus}
 \newcommand{\tdots}{\times\dots\times}
 \newcommand{\adots}{+\dots +}
@@ -239,6 +241,12 @@ linkcolor=link, citecolor=cite}
 \newcommand{\ldots}{,\dots ,}
 \newcommand{\df}[3]{{#1}\colon {#2}\to {#3}}
 \newcommand{\id}{\textrm{Id}}
+
+\newcommand*{\medcap}{\mathbin{\scalebox{1.5}{\ensuremath{\cap}}}}
+\newcommand*{\medoplus}{\mathbin{\scalebox{1.5}{\ensuremath{\oplus}}}}
+\newcommand*{\medcup}{\mathbin{\scalebox{1.5}{\ensuremath{\cup}}}}
+\newcommand*{\medsum}{\mathbin{\scalebox{1.25}{\ensuremath{\sum}}}}
+\newcommand*{\medprod}{\mathbin{\scalebox{1.25}{\ensuremath{\prod}}}}
 
 %Notes of coauthors
 \newcommand{\usnote}[1]{\marginpar{\color{cyan}\tiny [US] #1}}
