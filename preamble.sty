@@ -7,9 +7,10 @@
 %<---
 
 %---> Standard packages
-\usepackage{charter}
-\usepackage[charter]{mathdesign}
-%\usepackage{newpxmath,newpxtext}
+%\usepackage{charter}
+%\usepackage[charter]{mathdesign}
+\usepackage{newpxmath,newpxtext}
+%\usepackage{newpxmath}
 \renewcommand{\familydefault}{\rmdefault}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
@@ -28,6 +29,8 @@
 \usepackage{amstext}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{xifthen}
+%\usepackage{stmaryrd}
 \usepackage[unicode=true,pdfusetitle,
 bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true]
@@ -78,7 +81,9 @@ linkcolor=link, citecolor=cite}
 \newcommand{\declarecommand}[1]{\providecommand{#1}{}\renewcommand{#1}}
 \newcommand{\al}{\upalpha}
 \declarecommand{\mu}{\upmu}
+\declarecommand{\pi}{\uppi}
 \declarecommand{\nu}{\upnu}
+\declarecommand{\phi}{\upphi}
 \newcommand{\be}{\upbeta}
 \newcommand{\io}{\upiota}
 \newcommand{\ga}{\upgamma}
@@ -167,6 +172,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\gow}{\mathfrak{w}}
 \newcommand{\goT}{\mathfrak{T}}
 \newcommand{\goB}{\mathfrak{B}}
+\newcommand{\goQ}{\mathfrak{Q}}
 \newcommand{\goS}{\mathfrak{S}}
 \newcommand{\gosl}{\mathfrak{sl}}
 \newcommand{\goso}{\mathfrak{so}}
@@ -220,8 +226,9 @@ linkcolor=link, citecolor=cite}
 \newcommand{\Ad}{\on{Ad}}
 \newcommand{\hT}{\hat{T}}
 \newcommand{\mz}{\smallsetminus\set 0}
-\newcommand\dv[2]{\mathrm{d}#1(#2)}
-\newcommand\du[1]{\mathrm{d}#1}
+%\newcommand\dv[2]{\mathrm{d}#1(#2)}
+\newcommand{\dv}[2]{\ifthenelse{\isempty{#2}}{\mathrm{d}#1}{\mathrm{d}#1(#2)}}
+%\newcommand\du[1]{\mathrm{d}#1}
 \newcommand{\qand}{\quad\textrm{and}\quad}
 \newcommand{\aand}{\ \textrm{and}\ }
 \newcommand{\qor}{\quad\textrm{or}\quad}
@@ -242,9 +249,9 @@ linkcolor=link, citecolor=cite}
 \newcommand{\df}[3]{{#1}\colon {#2}\to {#3}}
 \newcommand{\id}{\textrm{Id}}
 
-\newcommand*{\medcap}{\mathbin{\scalebox{1.5}{\ensuremath{\cap}}}}
-\newcommand*{\medoplus}{\mathbin{\scalebox{1.5}{\ensuremath{\oplus}}}}
-\newcommand*{\medcup}{\mathbin{\scalebox{1.5}{\ensuremath{\cup}}}}
+\newcommand*{\medcap}{\mathbin{\scalebox{1}{\ensuremath{\bigcap}}}}
+\newcommand*{\medoplus}{\mathbin{\scalebox{0.8}{\ensuremath{\bigoplus}}}}
+\newcommand*{\medcup}{\mathbin{\scalebox{1}{\ensuremath{\bigcup}}}}
 \newcommand*{\medsum}{\mathbin{\scalebox{1.25}{\ensuremath{\sum}}}}
 \newcommand*{\medprod}{\mathbin{\scalebox{1.25}{\ensuremath{\prod}}}}
 
