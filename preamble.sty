@@ -22,6 +22,7 @@
 \usepackage{color}
 \definecolor{document_fontcolor}{rgb}{0.175781, 0.183594, 0.230469}
 \color{document_fontcolor}
+\usepackage{mathtools}
 \usepackage{babel}
 \usepackage{verbatim}
 \usepackage{enumerate}
@@ -36,7 +37,7 @@ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=true]
 {hyperref}
 \hypersetup{
-linkcolor=link, citecolor=cite}
+linkcolor=link, citecolor=cite, urlcolor=cite}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \numberwithin{equation}{section}
@@ -53,6 +54,8 @@ linkcolor=link, citecolor=cite}
 \newtheorem{cor}[thm]{\protect\corollaryname}
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{\protect\remarkname}
+\theoremstyle{remark}
+\newtheorem{claim}[thm]{\protect\claimname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{mathtools}
@@ -71,6 +74,7 @@ linkcolor=link, citecolor=cite}
 \providecommand{\propositionname}{Proposition}
 \providecommand{\remarkname}{Remark}
 \providecommand{\theoremname}{Theorem}
+\providecommand{\claimname}{Claim}
 \linespread{1.02333}
 %<---
 
@@ -84,7 +88,9 @@ linkcolor=link, citecolor=cite}
 \declarecommand{\pi}{\uppi}
 \declarecommand{\nu}{\upnu}
 \declarecommand{\phi}{\upphi}
+\declarecommand{\rho}{\uprho}
 \newcommand{\be}{\upbeta}
+\newcommand{\vphi}{\upvarphi}
 \newcommand{\io}{\upiota}
 \newcommand{\ga}{\upgamma}
 \newcommand{\Ga}{\Gamma}
@@ -99,7 +105,7 @@ linkcolor=link, citecolor=cite}
 \newcommand{\sig}{\upsigma}
 \newcommand{\Sig}{\Upsigma}
 \newcommand{\om}{\upomega}
-\newcommand{\Om}{\upOmega}
+\newcommand{\Om}{\Omega}
 %------------------------------------------------------------------------------------------------------------
 %-----Capital letters--------------
 \newcommand{\cA}{\mathcal{A}}
@@ -204,7 +210,7 @@ linkcolor=link, citecolor=cite}
 \DeclarePairedDelimiter\Sp{\langle}{\rangle}
 \DeclarePairedDelimiter\br{[}{]}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-\DeclarePairedDelimiter\ceil{\lceil}{rceil}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 % ::::::::::::::::::::::::::::::::::::::::::::::::::::
 \newcommand{\defi}{\coloneqq}
 \newcommand{\Empty}{\varnothing}
@@ -245,12 +251,13 @@ linkcolor=link, citecolor=cite}
 \newcommand{\tdots}{\times\dots\times}
 \newcommand{\adots}{+\dots +}
 \newcommand{\otdots}{\otimes\dots\otimes}
+\newcommand{\opdots}{\oplus\dots\oplus}
 \newcommand{\ldots}{,\dots ,}
 \newcommand{\df}[3]{{#1}\colon {#2}\to {#3}}
 \newcommand{\id}{\mathrm{Id}}
 
 \newcommand*{\medcap}{\mathbin{\scalebox{1}{\ensuremath{\bigcap}}}}
-\newcommand*{\medoplus}{\mathbin{\scalebox{0.8}{\ensuremath{\bigoplus}}}}
+\newcommand*{\medoplus}{\mathbin{\scalebox{1}{\ensuremath{\bigoplus}}}}
 \newcommand*{\medcup}{\mathbin{\scalebox{1}{\ensuremath{\bigcup}}}}
 \newcommand*{\medsum}{\mathbin{\scalebox{1.25}{\ensuremath{\sum}}}}
 \newcommand*{\medprod}{\mathbin{\scalebox{1.25}{\ensuremath{\prod}}}}
